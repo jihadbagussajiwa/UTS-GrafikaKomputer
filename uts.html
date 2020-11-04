@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+	<center>
+			<canvas id="myCanvas" width="500" height="400" style="border:2px solid #d3d3d3;"> Your browser does not support the HTML5 canvas tag.</canvas>
+
+		<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.font='small-caps 30px Arial';				
+				ctx.fillText("melawan virus", 290, 50);
+
+				ctx.beginPath();
+				ctx.rotate(35 * Math.PI / 180);
+				ctx.fillStyle = "red";
+				ctx.fillRect(0, 0, 1000, 50);
+
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+
+  			 for(i = 13; i < 100; i++){
+       		 for(j = 33; j < 100; j++){
+            // isi nilai titik dengan bilangan acak
+            var x = Math.floor(Math.random() * canvas.width);
+            var y = Math.floor(Math.random() * canvas.height);
+            // gambar titknya
+            ctx.fillRect(x, y, 1,1);}}
+				ctx.setTransform();
+				ctx.beginPath();
+				ctx.arc(250,200,150,0,2*Math.PI);
+				ctx.fillStyle='black';
+				ctx.clip();
+				ctx.fill()
+				// Draw red rectangle after clip()
+				ctx.beginPath();
+				ctx.arc(200,160,40,0,2*Math.PI);
+				ctx.fillStyle='red';
+				ctx.fill()
+
+				ctx.beginPath();
+				ctx.arc(305,160,40,0,2*Math.PI);
+				ctx.fillStyle='red';
+				ctx.fill()
+
+				ctx.beginPath();
+				ctx.fillStyle = "yellow";
+				ctx.fillRect(320, 20, 150, 100);
+
+				ctx.beginPath();
+				ctx.fillStyle = "yellow";
+				ctx.fillRect(30, 20, 150, 100);
+
+				ctx.beginPath();
+				ctx.moveTo(290, 240); // titik awal
+				ctx.lineTo(250, 180); // titik ke-2
+				ctx.lineTo(210, 240); // titik ke-3
+				ctx.closePath(); // titik ke-3 ke titik awal
+				ctx.fillStyle = "blue";
+				ctx.fill();			
+
+				var gambar = new Image();
+				gambar.src = "gg.JPG";
+				gambar.onload = function(){
+				ctx.drawImage (gambar,155,230,200,100)
+				}
+				ctx.beginPath();
+				ctx.fillStyle = "tomato";
+				ctx.fillRect(50, 250, 150, 30);	
+				
+				ctx.beginPath();
+				ctx.fillStyle = "tomato";
+				ctx.fillRect(300, 250, 150, 30);	
+		</script>
+	</center>
+</html>
